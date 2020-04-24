@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 
-const usersRouter = require('../users/users-router')
+const usersRouter = require('../auth/auth-router')
 const authenticate = require('../auth/authenticate-middleware.js');
 const authRouter = require('../auth/auth-router.js');
 const jokesRouter = require('../jokes/jokes-router.js');
@@ -18,6 +18,6 @@ server.use('/api/jokes', authenticate, jokesRouter);
 server.use('/api/users', usersRouter);
 server.use('/', (req, res) => {
   res.send("API up ...");
-})
+}) 
 
 module.exports = server;

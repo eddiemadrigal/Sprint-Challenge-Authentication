@@ -10,10 +10,13 @@ function find() {
   return db('users').select('id', 'username', 'password')
 }
 
-function add() {
-
+async function add(user) {
+  const [id] = await db('users').insert(user);
+  return findById(id);
 }
 
 function findById() {
-  
+  return db('users')
+    .where({ id })
+    .first();
 }
