@@ -12,6 +12,7 @@ const db = require('../database/dbConfig');
 */
 
 describe('server', () => {
+
   describe('GET /', () => {
     it('should run without errors', () => {
       expect(true).toBe(true);
@@ -31,7 +32,7 @@ describe('server', () => {
     it('should run without errors', () => {
       expect(true).toBe(true);
     })
-    it('should return 201 OK', () => {
+    it('should return 200 OK', () => {
       // make a GET request to / endpoint on the server
       return request(server) // return the async call to let jest know it should wait
         .get('/')
