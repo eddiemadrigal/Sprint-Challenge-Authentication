@@ -33,7 +33,7 @@ describe('server', () => {
       expect(true).toBe(true);
     })
     it('should return 200 OK', () => {
-      // make a GET request to / endpoint on the server
+      // make a POST request to / endpoint on the server
       return request(server) // return the async call to let jest know it should wait
         .get('/')
         .then( res => {
@@ -48,7 +48,7 @@ describe('server', () => {
       expect(true).toBe(true);
     })
     it('should return 201 OK', () => {
-      // make a GET request to / endpoint on the server
+      // make a POST request to / endpoint on the server
       return request(server) // return the async call to let jest know it should wait
         .get('/')
         .then( res => {
